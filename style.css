@@ -41,7 +41,7 @@ body {
 }
 
 .container {
-  max-width: 100vw;
+  max-width: 1200px; /* Limit container width for desktop */
   margin: 0 auto;
   padding: 4rem;
   background: transparent;
@@ -177,7 +177,7 @@ section h2 {
   background: rgba(0, 0, 0, 0.95); /* Darker background for cards */
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
-  padding: 2.5rem;
+  padding: 1.5rem; /* reduced from 2.5rem */
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -200,7 +200,8 @@ section h2 {
 
 .project-img {
   width: 100%;
-  height: 200px;
+  height: 150px;
+  min-height: 80px;
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 1.5rem;
@@ -224,14 +225,43 @@ section h2 {
   text-shadow: 0 0 6px #ff4081, 0 0 12px #ff4081; /* Reduced hover glow */
 }
 
-@media (max-width: 600px) {
-  .container, .hero {
+#bio p {
+  font-size: 1.25rem;
+  line-height: 2.1;
+  color: #e0f7fa;
+  padding: 0;
+  max-width: 700px;
+  margin: 0 auto;
+  text-shadow: 0 0 6px #00d4ff, 0 0 2px #000;
+  /* background, border-radius, box-shadow removed */
+}
+
+@media (max-width: 992px) {
+  .container, .hero, section {
     padding: 2rem;
   }
+  section {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container, .hero {
+    padding: 1rem;
+  }
+  section {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
   .name {
-    font-size: 3.5rem;
+    font-size: 2.2rem;
   }
   section h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+  }
+  .project-img {
+    height: 90px;
+    min-height: 60px;
+    max-width: 100%;
   }
 }
