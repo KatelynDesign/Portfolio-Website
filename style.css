@@ -1,0 +1,186 @@
+body {
+  font-family: 'Source Serif 4', Arial, sans-serif;
+  background: url('img/Screenshot (22).png') center center/cover no-repeat;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+.nav {
+  width: 100vw;
+  background: #B89DD9; /* sampled from Screenshot (22).png */
+  padding: 1rem 0;
+  margin-bottom: 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin: 0;
+  padding: 0 2rem 0 0;
+}
+.nav a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+.nav a:hover {
+  color: #ffd700;
+}
+.container {
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 4rem;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+}
+.name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #000;
+}
+.role {
+  font-size: 1.7rem;
+  color: #000;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.hero {
+  background: rgba(212, 190, 228, 0.75); /* more transparent */
+  color: #fff;
+  /* Make hero take up to top of the page */
+  padding: 0 2rem;
+  min-height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: -18rem;
+}
+.hero-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #bbb;
+}
+section {
+  margin-bottom: 3.5rem;
+  margin-top: 3.5rem;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.55);
+  /* You can adjust the alpha for more/less transparency */
+  font-size: 1.25rem;
+  line-height: 1.7;
+}
+#bio {
+  background: rgba(243, 233, 250, 0.55); /* lighter purple */
+}
+#skills {
+  background: rgba(230, 240, 250, 0.55); /* bluish tint */
+}
+section h2 {
+  font-size: 2rem;
+  color: #222;
+  /* border-bottom: 2px solid #eee; */
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+}
+.skills-list li {
+  background: #e9ecef;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+#contact {
+  background: rgba(220, 240, 230, 0.55); /* soft green tint */
+}
+#contact form input,
+#contact form textarea {
+  font-size: 1rem;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+#contact form button {
+  transition: background 0.2s;
+}
+#contact form button:hover {
+  background: #a07fc9;
+}
+#projects {
+  background: rgba(245, 235, 250, 0.55); /* soft purple tint */
+}
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.project-card {
+  background: #f7f3fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1.5rem;
+  max-width: 320px;
+  flex: 1 1 280px;
+}
+.project-card h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: #6c3eb8;
+}
+.project-card p {
+  font-size: 1rem;
+  color: #333;
+}
+.project-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  background: #ddd;
+  display: block;
+}
+.project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #B89DD9;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.project-link:hover {
+  background: #a07fc9;
+}
+@media (max-width: 600px) {
+  .container, .hero {
+    padding: 1rem;
+  }
+  .name {
+    font-size: 2rem;
+  }
+}
