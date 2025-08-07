@@ -1,38 +1,45 @@
 body {
   font-family: 'Source Serif 4', Arial, sans-serif;
-  background: url('img/Screenshot (22).png') center center/cover no-repeat;
-  color: #222;
+  background: linear-gradient(135deg, #1a1a2e, #16213e); /* Dark gradient background */
+  color: #e0e0e0; /* Light gray text for readability */
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
+
 .nav {
   width: 100vw;
-  background: #B89DD9; /* sampled from Screenshot (22).png */
-  padding: 1rem 0;
-  margin-bottom: 0;
+  background: rgba(0, 0, 0, 0.9); /* Darker navbar */
+  padding: 1.5rem 0;
   position: sticky;
   top: 0;
   left: 0;
   z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
+
 .nav ul {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
-  gap: 2rem;
+  justify-content: space-around; /* Evenly spaced links */
   margin: 0;
-  padding: 0 2rem 0 0;
+  padding: 0;
 }
+
 .nav a {
-  color: #000;
+  color: #00d4ff; /* Neon cyan links */
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: bold;
-  transition: color 0.2s;
+  text-shadow: 0 0 4px #00d4ff; /* Reduced glow effect */
+  transition: color 0.3s, text-shadow 0.3s;
 }
+
 .nav a:hover {
-  color: #ffd700;
+  color: #ff4081; /* Neon pink glow on hover */
+  text-shadow: 0 0 6px #ff4081; /* Reduced hover glow */
 }
+
 .container {
   max-width: 100vw;
   margin: 0 auto;
@@ -41,146 +48,190 @@ body {
   border-radius: 0;
   box-shadow: 0 6px 24px rgba(0,0,0,0.10);
 }
+
 .name {
-  font-size: 2.5rem;
+  font-size: 4.5rem; /* Larger font size */
   font-weight: bold;
-  margin-bottom: 0.5rem;
-  text-align: center;
-  color: #000;
+  margin-bottom: 1rem;
+  color: #00d4ff; /* Neon cyan glow */
+  text-shadow: 0 0 8px #00d4ff, 0 0 16px #00d4ff; /* Reduced glow */
 }
+
 .role {
-  font-size: 1.7rem;
-  color: #000;
-  text-align: center;
-  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #ff4081; /* Neon pink glow */
+  text-shadow: 0 0 6px #ff4081, 0 0 12px #ff4081; /* Reduced glow */
+  margin-bottom: 3rem;
 }
+
 .hero {
-  background: rgba(212, 190, 228, 0.75); /* more transparent */
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(48, 43, 99, 0.8)); /* Dark gradient for hero */
   color: #fff;
-  /* Make hero take up to top of the page */
-  padding: 0 2rem;
-  min-height: 55vh;
+  padding: 5rem;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 8px;
+  align-items: center;
+  border-radius: 16px;
   text-align: center;
-  margin-bottom: 2rem;
-  margin-top: -18rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
 }
+
 .hero-title {
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
+
 .hero-subtitle {
   font-size: 1.1rem;
   color: #bbb;
 }
+
 section {
-  margin-bottom: 3.5rem;
-  margin-top: 3.5rem;
-  padding: 2rem 1.5rem;
-  border-radius: 12px;
-  background: rgba(255,255,255,0.55);
-  /* You can adjust the alpha for more/less transparency */
-  font-size: 1.25rem;
-  line-height: 1.7;
+  margin-bottom: 4rem;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.85); /* Dark transparent background */
+  font-size: 1.4rem;
+  line-height: 1.9;
+  box-shadow: 0 0 20px #00d4ff; /* Glow effect around section boxes */
 }
-#bio {
-  background: rgba(243, 233, 250, 0.55); /* lighter purple */
-}
-#skills {
-  background: rgba(230, 240, 250, 0.55); /* bluish tint */
-}
+
 section h2 {
-  font-size: 2rem;
-  color: #222;
-  /* border-bottom: 2px solid #eee; */
-  padding-bottom: 0.5rem;
-  margin-bottom: 2rem;
+  font-size: 3.2rem; /* Larger section titles */
+  color: #00d4ff; /* Neon cyan glow */
+  text-align: center;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 8px #00d4ff, 0 0 16px #00d4ff; /* Reduced glow */
 }
+
 .skills-list {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  display: grid; /* Grid layout for skills */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
   padding: 0;
 }
+
 .skills-list li {
-  background: #e9ecef;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1); /* Transparent white */
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  text-shadow: 0 0 4px #00d4ff; /* Reduced glow */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  text-align: center;
 }
+
 #contact {
-  background: rgba(220, 240, 230, 0.55); /* soft green tint */
+  background: rgba(0, 0, 0, 0.9); /* Darker background for contact */
+  padding: 3.5rem;
+  border-radius: 16px;
+  box-shadow: 0 0 20px #00d4ff; /* Glow effect around contact section */
 }
+
 #contact form input,
 #contact form textarea {
-  font-size: 1rem;
-  margin-bottom: 0;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
   box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+  border: 1px solid #00d4ff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-shadow: 0 0 8px #00d4ff;
 }
+
 #contact form button {
-  transition: background 0.2s;
+  background: #00d4ff;
+  color: #000;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 0 8px #fff;
+  transition: background 0.3s, text-shadow 0.3s;
 }
+
 #contact form button:hover {
-  background: #a07fc9;
+  background: #ff4081;
+  text-shadow: 0 0 12px #ff4081, 0 0 24px #ff4081;
 }
+
 #projects {
   background: rgba(245, 235, 250, 0.55); /* soft purple tint */
 }
+
 .projects-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid; /* Grid layout for projects */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   justify-content: center;
 }
+
 .project-card {
-  background: #f7f3fa;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  padding: 1.5rem;
-  max-width: 320px;
-  flex: 1 1 280px;
+  background: rgba(0, 0, 0, 0.95); /* Darker background for cards */
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  padding: 2.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
+
+.project-card:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 10px 25px #00d4ff; /* Glow effect on hover */
+}
+
 .project-card h3 {
   margin-top: 0;
-  font-size: 1.3rem;
-  color: #6c3eb8;
+  font-size: 1.8rem;
+  color: #00d4ff; /* Neon cyan glow */
+  text-shadow: 0 0 8px #00d4ff, 0 0 16px #00d4ff; /* Reduced glow */
 }
+
 .project-card p {
-  font-size: 1rem;
-  color: #333;
+  font-size: 1.2rem;
+  color: #e0e0e0;
 }
+
 .project-img {
   width: 100%;
-  height: 160px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-  background: #ddd;
-  display: block;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
 }
+
 .project-link {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: #B89DD9;
-  color: #fff;
-  border-radius: 4px;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #00d4ff;
+  color: #000;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.2s;
+  text-shadow: 0 0 4px #fff; /* Reduced glow */
+  transition: background 0.3s, text-shadow 0.3s;
 }
+
 .project-link:hover {
-  background: #a07fc9;
+  background: #ff4081; /* Neon pink glow */
+  text-shadow: 0 0 6px #ff4081, 0 0 12px #ff4081; /* Reduced hover glow */
 }
+
 @media (max-width: 600px) {
   .container, .hero {
-    padding: 1rem;
+    padding: 2rem;
   }
   .name {
-    font-size: 2rem;
+    font-size: 3.5rem;
+  }
+  section h2 {
+    font-size: 2.5rem;
   }
 }
