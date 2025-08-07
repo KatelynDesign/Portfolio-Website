@@ -14,6 +14,13 @@
   <meta name="theme-color" content="#1a1a2e">
 </head>
 <body>
+  <!-- Move the LTR/RTL toggle to the bottom left corner -->
+  <div style="position: fixed; bottom: 16px; left: 16px; z-index: 9999;">
+    <select id="direction-toggle" class="form-select form-select-sm" style="width: 110px;">
+      <option value="ltr">LTR</option>
+      <option value="rtl">RTL</option>
+    </select>
+  </div>
   <!-- Bootstrap responsive navbar -->
   <nav class="navbar navbar-expand-lg sticky-top" style="background: rgba(0,0,0,0.9); box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
     <div class="container-fluid">
@@ -215,6 +222,20 @@
     });
     phoneTooltip.addEventListener('mouseenter', () => {
       showTooltip(phoneTooltip);
+    });
+
+    // LTR/RTL toggle logic
+    const dirToggle = document.getElementById('direction-toggle');
+    dirToggle.addEventListener('change', function () {
+      document.documentElement.setAttribute('dir', this.value);
+      document.body.setAttribute('dir', this.value);
+
+      // Adjust text alignment for RTL/LTR
+      if (this.value === 'rtl') {
+        document.body.classList.add('rtl');
+      } else {
+        document.body.classList.remove('rtl');
+      }
     });
 
     // Neon hover effect for nav links
